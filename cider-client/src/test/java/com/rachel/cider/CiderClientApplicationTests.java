@@ -1,4 +1,4 @@
-package come.rachel.cider;
+package com.rachel.cider;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CiderClientApplicationTests {
+
 
 	@Test
 	public void contextLoads() {
