@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jboxcdn.com/0.4.8/jBox.min.js"></script>
+    <link href="//code.jboxcdn.com/0.4.8/jBox.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    (function(){
+        function notice(){
+            new jBox('Notice', {
+                content: '飛鴿傳書成功!',
+                color: 'blue',
+                attributes: {
+                    x: 'right',
+                    y: 'bottom'
+                }
+            });
+        }
+
+        function socialLogin(){
+            $.ajax({
+                type: 'POST',
+                url: "/v1/api/socialMedia/facebook/login",
+                data: {
+                },
+                success: function( result ) {
+                    notice();
+                }
+            });
+
+        }
+    });
+
+
+
+
+</script>
+
+<div>
+    <p>Let's try some facebook function</p>
+    <p>login first!</p>
+    <div onclick="socialLogin()">Facebook Login please!</div>
+</div>
+
+
+</body>
+</html>
