@@ -1,4 +1,4 @@
-package come.rachel.cider;
+package com.rachel.cider;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
